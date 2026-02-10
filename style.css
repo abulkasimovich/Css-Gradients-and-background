@@ -10,7 +10,7 @@
     margin: auto;
 }
 
-.header {}
+
 
 .nav {
     display: flex;
@@ -207,20 +207,10 @@ nav a.active {
     z-index: 1;
 }
 
-.new-card img:nth-child(2) {
+.new-card .heart {
     position: absolute;
-    bottom: 85px;
-    right: 20px;
-    width: 40px;
-    cursor: pointer;
-}
-
-.new-card .heart{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    bottom: 20px;
-    right: 20px;
+    bottom: 0;
+    right: 0;
 }
 
 .new-card span {
@@ -241,12 +231,20 @@ nav a.active {
 }
 
 .cta-box {
+    height: 360px;
+    width: 100%;
+    display: flex;
     background: #e53945;
     border-radius: 30px;
     padding: 60px;
     align-items: center;
-    justify-content: space-between;
-    position: relative;
+    gap: 130px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-box .letter {
+    display: block;
 }
 
 .cta-box h2 {
@@ -276,4 +274,62 @@ nav a.active {
 .cta-box img {
     width: 260px;
     transform: rotate(-15deg);
+}
+
+.cta-box img {
+    width: 420px;
+    height: 320px;
+
+
+}
+
+footer img {
+    height: 360px;
+    width: 100%;
+    opacity: 1;
+    top: 3425px;
+
+
+
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+    .hero-content,
+    .features-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+    nav {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .features h2,
+    .new-gifts h2 {
+        font-size: 24px;
+    }
+
+    .cta-box {
+        padding: 30px;
+    }
+
+    .cta-box h2 {
+        font-size: 24px;
+    }
 }
